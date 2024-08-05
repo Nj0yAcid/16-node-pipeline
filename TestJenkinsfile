@@ -4,6 +4,7 @@ pipeline{
     
     stages{
         stage('dependencies install'){
+            agent { docker {image 'node'}}
             steps{
                 sh 'npm install'
             }
