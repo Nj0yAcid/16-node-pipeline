@@ -6,6 +6,8 @@ pipeline{
         stage('dependencies install'){
             agent { docker {image 'node:14'}}
             steps{
+                sh 'apt update'
+                sh 'apt install sudo -y'
                 sh ('chown -R 995:993 "/.npm"')
                 sh 'npm install'
             }
