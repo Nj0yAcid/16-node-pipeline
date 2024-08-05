@@ -18,7 +18,7 @@ pipeline{
 
         stage('upload art{ifact'){
             steps{
-                curl -u admin:AP6gCHaGvbw5kdFyGsCnMa2u4XR -T  *.tgz "http://54.234.221.136:8081/artifactory/utc-node/utc-node-app${BUILD_ID}.tgz"
+                sh 'curl -u admin:AP6gCHaGvbw5kdFyGsCnMa2u4XR -T  *.tgz "http://54.234.221.136:8081/artifactory/utc-node/utc-node-app${BUILD_ID}.tgz"'
             }
         }
     }
