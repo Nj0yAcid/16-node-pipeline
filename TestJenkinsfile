@@ -10,5 +10,11 @@ pipeline{
                 sh 'npm install'
             }
         }
+
+        stage('pacakging'){
+            steps{
+                sh 'npm pack'
+            }
+        }
     }
 }
