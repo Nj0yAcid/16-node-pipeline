@@ -10,7 +10,7 @@ pipeline{
             }
         }
 
-        stage('pacakging'){
+        stage('packaging'){
             steps{
                 sh 'npm pack'
             }
