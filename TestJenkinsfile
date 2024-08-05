@@ -4,9 +4,8 @@ pipeline{
     
     stages{
         stage('dependencies install'){
-            agent { docker {image 'nodejs'}}
+            agent { docker {image 'node:14' args '-u root:sudo'}}
             steps{
-                sh 'npm cache clean'
             //    sh ('sudo chown -R 995:993 "/.npm"')
                 sh 'npm install'
             }
